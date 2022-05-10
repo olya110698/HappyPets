@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import styled from "styled-components";
 
 const HeadContainer = styled.div`
@@ -14,10 +13,10 @@ const HeadContainer = styled.div`
 
 export default function StartPage() {
   return (
-    <>
+    <div>
       <HeadContainer>
         <h1>Hi!</h1>
       </HeadContainer>
-    </>
+    </div>
   );
 }
