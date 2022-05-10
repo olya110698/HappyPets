@@ -1,2 +1,0 @@
-# HappyPets
-Dog walking app
