@@ -1,29 +1,20 @@
 import React from "react";
+import styled from "styled-components";
 
-export default function AppHeader(props) {
-  const { onRequestCall, signService } = props;
+const WrapperContainer = styled.div`
+  display: flex;
+  background: url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) center /
+    cover no-repeat fixed;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+`;
+
+export default function HeaderApp() {
   return (
-    <div className="app-header-wrapper">
-      <div className="App">
-        <div className="app-header">
-          <div className="company-name">Атлант-М Боровая</div>
-          <div className="address-main">Минский р-н, р-н д.Боровая, 2</div>
-          <div className="telephone-number">
-            {" "}
-            <a href="tel:+375445509337">+375 44 550 93 37</a>
-          </div>
-          <div className="request-call">
-            <button type="button" onClick={onRequestCall}>
-              Заказать звонок
-            </button>
-          </div>
-          <div className="sign-service">
-            <button type="button" onClick={signService}>
-              Записаться на сервис
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <WrapperContainer>
+      <h1>Hi!</h1>
+    </WrapperContainer>
   );
 }
