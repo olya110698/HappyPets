@@ -10,9 +10,8 @@ const LogoContainer = styled.div`
 const LogoImg = styled.img`
   display: flex;
   align-items: center;
-  width: 150px;
-  height: 70px;
-  margin-left: 2px;
+  width: 170px;
+  height: 82px;
 `;
 
 export default function Logo() {
