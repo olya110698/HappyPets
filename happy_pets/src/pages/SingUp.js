@@ -3,10 +3,29 @@ import "./SignUp.css";
 import styled from "styled-components";
 import { TextField } from "@mui/material";
 import Button from "@mui/material/Button";
+import { withStyles } from "@material-ui/styles";
 import image from "../img/background_for_form.jpg";
-// import { makeStyles, withStyles, withTheme } from "@material-ui/core/styles";
 import HeaderApp from "../components/HeaderApp/HeaderApp";
-import { width } from "@mui/system";
+
+const CustomButton = withStyles({
+  root: {
+    background: "#4b0082",
+    "&:hover": {
+      backgroundColor: "#9932CC",
+    },
+    borderRadius: 14,
+    border: 0,
+    color: "#FAFAFA;",
+    width: "250px",
+    height: "56px",
+    fontSize: "20px",
+  },
+  label: {
+    textTransform: "capitalize",
+    fontSize: "30px",
+  },
+  typography: { fontFamily: "Roboto" },
+})((props) => <Button {...props} />);
 
 const css = `
 .background_image{
@@ -27,7 +46,7 @@ const InputsContainer = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  height: 400px;
+  height: 500px;
   width: 1700px;
 `;
 
@@ -55,7 +74,7 @@ export default function SignUp() {
             label="Confirm password"
             variant="filled"
           />
-          <Button>Sign Up</Button>
+          <CustomButton>Sign Up</CustomButton>
         </InputsContainer>
       </MainContainer>
     </>
