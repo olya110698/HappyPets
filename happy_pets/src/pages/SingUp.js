@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { TextField } from "@mui/material";
 import Button from "@mui/material/Button";
 import { withStyles } from "@material-ui/styles";
+import { useGoogleLogin } from "react-google-login";
+import { useNavigate } from "react-router-dom";
 import image from "../img/background_for_form.jpg";
 import HeaderApp from "../components/HeaderApp/HeaderApp";
 
@@ -56,8 +58,28 @@ const HeaderInputs = styled.div`
   color: #4b0082;
   font-size: 30px;
 `;
-
+const clientId =
+  "471314938201-to7irpgig8e7fv8ikn6oavu14ldicg9d.apps.googleusercontent.com";
 export default function SignUp() {
+  const history = useNavigate();
+  const onSuccess = (res) => {
+    console.log("Login Success: currentUser:", res.profileObj);
+    history.push("/about_us");
+  };
+
+  const onFailure = (res) => {
+    console.log("Login failed: res:", res);
+  };
+
+  const { signIn } = useGoogleLogin({
+    onSuccess,
+    onFailure,
+    clientId,
+    isSignedIn: true,
+    accessType: "offline",
+    // responseType: 'code',
+    // prompt: 'consent',
+  });
   return (
     <>
       <HeaderApp />
@@ -75,6 +97,10 @@ export default function SignUp() {
             variant="filled"
           />
           <CustomButton>Sign Up</CustomButton>
+          <CustomButton onClick={signIn}>
+            {/* <img src={icon_google_drive} alt="icon_google_drive" /> */}
+            Google
+          </CustomButton>
         </InputsContainer>
       </MainContainer>
     </>
