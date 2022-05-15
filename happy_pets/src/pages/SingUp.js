@@ -64,7 +64,7 @@ export default function SignUp() {
   const history = useNavigate();
   const onSuccess = (res) => {
     console.log("Login Success: currentUser:", res.profileObj);
-    history.push("/about_us");
+    history.push("/about_us ");
   };
 
   const onFailure = (res) => {
