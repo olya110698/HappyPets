@@ -53,8 +53,12 @@ const css = `
 .background_image{
    width:1200px;
    height:100%;
+}
+  .google_icon{
+    width:30px;
+    height:auto;
+    margin-right:10px
 }`;
-
 const MainContainer = styled.div`
   display: flex;
   align-items: center;
