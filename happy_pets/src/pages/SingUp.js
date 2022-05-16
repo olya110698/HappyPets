@@ -5,7 +5,8 @@ import Button from "@mui/material/Button";
 import { withStyles } from "@material-ui/styles";
 import { useGoogleLogin } from "react-google-login";
 import { useNavigate } from "react-router-dom";
-import image from "../img/background_for_form.jpg";
+import backgroundImage from "../img/background_for_form.jpg";
+import googleIcon from "../img/google_icon.png";
 import HeaderApp from "../components/HeaderApp/HeaderApp";
 
 const CustomButton = withStyles({
@@ -28,27 +29,68 @@ const CustomButton = withStyles({
   typography: { fontFamily: "Roboto" },
 })((props) => <Button {...props} />);
 
+const CustomGoogleButton = withStyles({
+  root: {
+    background: "#184DCB",
+    "&:hover": {
+      backgroundColor: "#1C7ED3",
+    },
+    borderRadius: 14,
+    border: 0,
+    color: "#FAFAFA;",
+    width: "250px",
+    height: "56px",
+    fontSize: "15px",
+  },
+  label: {
+    textTransform: "capitalize",
+    fontSize: "30px",
+  },
+  typography: { fontFamily: "Roboto" },
+})((props) => <Button {...props} />);
+
 const css = `
 .background_image{
-   width:1200px;
-   height:100%;
+    box-sizing: border-box;
+    margin: 0px;
+    flex-direction: row;
+    flex-basis: 50%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    max-width: 70%;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.google_icon{
+  width:30px;
+  height:auto;
+  margin-right:10px;
 }`;
 
 const MainContainer = styled.div`
-  display: flex;
+  box-sizing: border-box;
   align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 900px;
+  display: flex;
+  flex-flow: row;
+  width: 100%;
 `;
 
 const InputsContainer = styled.div`
+  box-sizing: border-box;
+  margin: 0px;
+  flex-direction: column;
+  flex-basis: 0px;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  gap: 4ch;
+  height: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-around;
-  height: 500px;
-  width: 1700px;
+  justify-content: space-between;
 `;
 
 const HeaderInputs = styled.div`
@@ -84,7 +126,11 @@ export default function SignUp() {
       <HeaderApp />
       <MainContainer>
         <style type="text/css">{css}</style>
-        <img className="background_image" alt="background" src={image} />
+        <img
+          className="background_image"
+          alt="background"
+          src={backgroundImage}
+        />
         <InputsContainer>
           <HeaderInputs>Sign Up</HeaderInputs>
           <TextField id="filled-basic" label="Email" variant="filled" />
@@ -96,10 +142,10 @@ export default function SignUp() {
             variant="filled"
           />
           <CustomButton>Sign Up</CustomButton>
-          <CustomButton onClick={signIn}>
-            {/* <img src={icon_google_drive} alt="icon_google_drive" /> */}
-            Google
-          </CustomButton>
+          <CustomGoogleButton onClick={signIn}>
+            <img className="google_icon" src={googleIcon} alt="icon_google" />
+            SIGN UP WITH GOOGLE
+          </CustomGoogleButton>
         </InputsContainer>
       </MainContainer>
     </>

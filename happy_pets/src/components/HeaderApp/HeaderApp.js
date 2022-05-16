@@ -56,10 +56,10 @@ export default function HeaderApp() {
         <Link href="/our_services">Our services</Link>
         <Link href="/">+48 603 72 37 57</Link>
         <Stack spacing={2} direction="row">
-          <Button variant="outlined" className="button">
+          <Button href="/sign_in" variant="outlined" className="button">
             Sign in
           </Button>
-          <Button variant="text" className="button">
+          <Button href="/sign_up" variant="text" className="button">
             Sing up
           </Button>
         </Stack>
