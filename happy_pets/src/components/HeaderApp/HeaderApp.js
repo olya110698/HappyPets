@@ -1,16 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { withStyles } from "@material-ui/styles";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Logo from "../Logo/Logo";
 
 const css = `
-.button{
-  text-decoration: none;
-  color: unset;
-  font-size: 20px;
-}
-
 .css-1rwt2y5-MuiButtonBase-root-MuiButton-root {
     border: 1px solid;
     text-transform: unset;
@@ -45,6 +40,26 @@ const Link = styled.a`
   margin: 0px 5px 0px 70px;
 `;
 
+const Buttons = withStyles({
+  root: {
+    background: "unset",
+    "&:hover": {
+      backgroundColor: "#4b0082",
+      borderColor: "unset",
+    },
+    border: 0,
+    color: "black",
+    width: "150px",
+    height: "56px",
+    fontSize: "20px",
+  },
+  label: {
+    textTransform: "capitalize",
+    fontSize: "30px",
+  },
+  typography: { fontFamily: "Roboto" },
+})((props) => <Button {...props} />);
+
 export default function HeaderApp() {
   return (
     <HeaderContainer>
@@ -56,17 +71,14 @@ export default function HeaderApp() {
         <Link href="/our_services">Our services</Link>
         <Link href="/">+48 603 72 37 57</Link>
         <Stack spacing={2} direction="row">
-          <Button variant="outlined" className="button">
+          <Buttons href="/sign_in" variant="outlined">
             Sign in
-          </Button>
-          <Button variant="text" className="button">
+          </Buttons>
+          <Buttons href="/sign_up" variant="text">
             Sing up
-          </Button>
+          </Buttons>
         </Stack>
       </LinkContainer>
     </HeaderContainer>
   );
 }
-
-// url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) center /cover no-repeat fixed;
-// <Link href="/about_us">Sing in</Link>/<Link to="/about_us">Sign up</Link>

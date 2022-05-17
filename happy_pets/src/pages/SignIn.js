@@ -51,8 +51,17 @@ const CustomGoogleButton = withStyles({
 
 const css = `
 .background_image{
-   width:1200px;
-   height:100%;
+    box-sizing: border-box;
+    margin: 0px;
+    flex-direction: row;
+    flex-basis: 50%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    max-width: 70%;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
 }
   .google_icon{
     width:30px;
@@ -61,20 +70,27 @@ const css = `
 }`;
 
 const MainContainer = styled.div`
-  display: flex;
+  box-sizing: border-box;
   align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 900px;
+  display: flex;
+  flex-flow: row;
+  width: 100%;
 `;
 
 const InputsContainer = styled.div`
+  box-sizing: border-box;
+  margin: 0px;
+  flex-direction: column;
+  flex-basis: 0px;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  gap: 4ch;
+  height: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-around;
-  height: 500px;
-  width: 1700px;
+  justify-content: space-between;
 `;
 
 const HeaderInputs = styled.div`
