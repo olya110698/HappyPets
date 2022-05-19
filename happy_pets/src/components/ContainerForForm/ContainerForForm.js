@@ -2,6 +2,7 @@ import React from "react";
 // import styled from "styled-components";
 import Container from "@mui/material/Container";
 import backgroundImage from "../../img/background_for_form.jpg";
+import SimpleBottomNavigation from "../../components/ContainerForForm/SimpleBottomNavigation";
 
 const css = `
 .container_background_img{
@@ -29,7 +30,7 @@ const css = `
 //   backdrop-filter: blur(50px);
 //   top: 0;
 //   left: 0px;
-//   width: calc(100% - 900px);
+//   width: calc(100% - 1300px);
 //   height: 100%;
 //   background: rgba(0, 0, 0, 0.01);
 // `;
@@ -38,6 +39,7 @@ export default function ContainerForForm() {
   return (
     <Container className="container_background_img" maxWidth="auto">
       <style type="text/css">{css}</style>
+      <SimpleBottomNavigation />
       {/* <BackgroundForm /> */}
     </Container>
   );
