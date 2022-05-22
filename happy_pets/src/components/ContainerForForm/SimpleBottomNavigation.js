@@ -1,46 +1,103 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/styles';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
-import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import RestoreIcon from '@mui/icons-material/Restore';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-// import container_forSearch from "../../img/background_for_form.jpg";
+import * as React from "react";
+import Box from "@mui/material/Box";
+import BottomNavigation from "@mui/material/BottomNavigation";
+import BottomNavigationAction from "@mui/material/BottomNavigationAction";
+import RestoreIcon from "@mui/icons-material/Restore";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import Grid from "@mui/material/Grid";
 
+import "./SimpleBottomNavigation.css";
 
-// const container_forSearch = styled.div`
-//   position: absolute;
-//   width: 100%;
-//   border-radius: 30px 0 0 30px;
-//   -webkit-backdrop-filter: blur(50px);
-//   backdrop-filter: blur(50px);
-//   top: 0;
-//   left: 0px;
-//   width: calc(100% - 1300px);
-//   height: 100%;
-//   background: rgba(0, 0, 0, 0.01);
-// `;
-const useStyles = makeStyles({
-  root: {
-    width: 500,
-  },
-});
+// const css = `
+// .css-16lloyr-MuiBottomNavigation-root {
+//     padding-left: 0px;
+//     padding-right: 0px;
+// }`;
+
 export default function SimpleBottomNavigation() {
-  const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
-  return (
-    <BottomNavigation
-      value={value}
-      onChange={(event, newValue) => {
-        setValue(newValue);
-      }}
-      showLabels
-      className={classes.root}
-    > 
-      <BottomNavigationAction label="Dog" icon={<RestoreIcon />} />
-      <BottomNavigationAction label="Cat" icon={<FavoriteIcon />} />
-    </BottomNavigation>
-   
+  return ( 
+    <Box sx={{ width: 200 }}>
+       <Grid container spacing={2}>
+       <Grid BottomNavigation xs={{ paddingBottom: 70 , paddingLeft: 5 }, 20 }>
+      <BottomNavigation
+        showLabels
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+      >
+        <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
+        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
+      </BottomNavigation>
+      </Grid>
+      
+      <Grid BottomNavigation xs={{ paddingTop: 10 , paddingLeft: 5 }, 20 }>
+      <BottomNavigation
+        showLabels
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+      >
+         <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
+        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
+      </BottomNavigation>
+      </Grid>
+      
+      <Grid BottomNavigation xs={20}>
+      <BottomNavigation
+        showLabels
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+      >
+        <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
+        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
+      </BottomNavigation>
+      </Grid>
+      
+      <Grid BottomNavigation xs={20}>
+      <BottomNavigation
+        showLabels
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+      >
+        <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
+        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
+      </BottomNavigation>
+      </Grid>
+      
+      <Grid BottomNavigation xs={20}>
+      <BottomNavigation
+        showLabels
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+      >
+        <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
+        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
+      </BottomNavigation>
+      </Grid>
+
+      <Grid BottomNavigation xs={20}>
+      <BottomNavigation
+        showLabels
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+      >
+        <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
+        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
+      </BottomNavigation>
+      </Grid>
+      </Grid>
+    </Box>
   );
 }
