@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "@mui/material/Container";
 import backgroundImage from "../../img/background_for_form.jpg";
-import SimpleBottomNavigation from "./SimpleBottomNavigation";
+import MainForm from "./MainForm/MainForm";
 
 const css = `
 .container_background_img{
@@ -25,7 +25,7 @@ export default function ContainerForForm() {
   return (
     <Container className="container_background_img" maxWidth="auto">
       <style type="text/css">{css}</style>
-      <SimpleBottomNavigation />
+      <MainForm />
     </Container>
   );
 }

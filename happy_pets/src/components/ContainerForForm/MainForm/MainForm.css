@@ -11,9 +11,9 @@
 .row {
   margin: 5px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .col-xs-12 {
