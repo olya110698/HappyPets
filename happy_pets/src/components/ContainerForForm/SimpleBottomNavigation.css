@@ -1,3 +1,41 @@
-.css-16lloyr-MuiBottomNavigation-root {
-    height: 30px;
+.form-send {
+  display: block;
+  margin-top: 0em;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px 15px;
+  height: 80%;
+  width: 30%;
+}
+
+.row {
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.col-xs-12 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.form-input-name .input-name__title {
+  display: block;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000;
+  margin-top: 0px;
+}
+
+.input-name__button-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
 }

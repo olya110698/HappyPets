@@ -1,103 +1,65 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
-import BottomNavigation from "@mui/material/BottomNavigation";
-import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import RestoreIcon from "@mui/icons-material/Restore";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import Grid from "@mui/material/Grid";
+import {
+  FormLabel,
+  Typography,
+  ToggleButtonGroup,
+  ToggleButton,
+} from "@mui/material";
 
 import "./SimpleBottomNavigation.css";
 
-// const css = `
-// .css-16lloyr-MuiBottomNavigation-root {
-//     padding-left: 0px;
-//     padding-right: 0px;
-// }`;
-
 export default function SimpleBottomNavigation() {
-  const [value, setValue] = React.useState(0);
+  const [selection, setSelection] = React.useState("web");
 
-  return ( 
-    <Box sx={{ width: 200 }}>
-       <Grid container spacing={2}>
-       <Grid BottomNavigation xs={{ paddingBottom: 70 , paddingLeft: 5 }, 20 }>
-      <BottomNavigation
-        showLabels
-        value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
-      >
-        <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-      </BottomNavigation>
-      </Grid>
-      
-      <Grid BottomNavigation xs={{ paddingTop: 10 , paddingLeft: 5 }, 20 }>
-      <BottomNavigation
-        showLabels
-        value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
-      >
-         <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-      </BottomNavigation>
-      </Grid>
-      
-      <Grid BottomNavigation xs={20}>
-      <BottomNavigation
-        showLabels
-        value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
-      >
-        <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-      </BottomNavigation>
-      </Grid>
-      
-      <Grid BottomNavigation xs={20}>
-      <BottomNavigation
-        showLabels
-        value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
-      >
-        <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-      </BottomNavigation>
-      </Grid>
-      
-      <Grid BottomNavigation xs={20}>
-      <BottomNavigation
-        showLabels
-        value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
-      >
-        <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-      </BottomNavigation>
-      </Grid>
+  const handleChange = (event, newSelection) => {
+    setSelection(newSelection);
+  };
+  return (
+    <FormLabel id="w0" className="form-send" action="/site/filter" method="get">
+      <div className="row">
+        <div className="col-xs-12">
+          {/* Looking for start */}
 
-      <Grid BottomNavigation xs={20}>
-      <BottomNavigation
-        showLabels
-        value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
-      >
-        <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-      </BottomNavigation>
-      </Grid>
-      </Grid>
-    </Box>
+          <div className="form-input-name">
+            <Typography mt={1} className="input-name__title">
+              I am looking for a service for...
+            </Typography>
+          </div>
+
+          <ToggleButtonGroup
+            className="input-name__button-group"
+            color="primary"
+            value={selection}
+            exclusive
+            onChange={handleChange}
+            fullWidth="true"
+          >
+            <ToggleButton value="dog">Dog</ToggleButton>
+            <ToggleButton value="cat">Cat</ToggleButton>
+          </ToggleButtonGroup>
+
+          {/* Looking for end */}
+          {/* Service selection start */}
+
+          <div className="form-input-name">
+            <Typography mt={1} className="input-name__title">
+              Service selection
+            </Typography>
+          </div>
+
+          <ToggleButtonGroup
+            className="input-name__button-group"
+            color="primary"
+            value={selection}
+            exclusive
+            onChange={handleChange}
+          >
+            <ToggleButton value="dog">Dog</ToggleButton>
+            <ToggleButton value="cat">Cat</ToggleButton>
+          </ToggleButtonGroup>
+          {/* Service selection end */}
+        </div>
+      </div>
+    </FormLabel>
   );
 }
