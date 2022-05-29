@@ -21,7 +21,7 @@ const css = `
     padding-right: 0px;
 }`;
 
-export default function ContainerForForm() {
+export default function BackgroundForForm() {
   return (
     <Container className="container_background_img" maxWidth="auto">
       <style type="text/css">{css}</style>
