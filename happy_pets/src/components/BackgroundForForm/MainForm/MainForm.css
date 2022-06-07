@@ -16,11 +16,22 @@
   justify-content: space-between;
 }
 
-.col-xs-12 {
-  position: relative;
+.wrapper-for-button {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+.wrapper-input-name {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: space-between;
+  margin-inline: 7px;
 }
 
 .form-input-name .input-name__title {
@@ -29,6 +40,7 @@
   font-size: 18px;
   color: #000;
   margin-top: 0px;
+  text-align: start;
 }
 
 .input-name__button-group {
@@ -38,4 +50,8 @@
   flex-flow: row wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+}
+
+.svg-for-icon {
+  padding: 0px 4px 0px 0px;
 }
