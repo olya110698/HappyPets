@@ -56,7 +56,7 @@ export default function ChoiceTheServiceForm() {
         fullWidth="true"
       >
         <CustomToggleButton value="dog">
-          <svg viewBox="0 0 500 450" width="22px" height="22px">
+          <svg color="inherit" viewBox="0 0 500 450" width="22px" height="22px">
             <path
               d="M440.651,132.739c-0.888-2.354-2.721-4.229-5.054-5.171L396.39,111.75c-2.435-12.666-12.056-22.81-24.436-26.008
 	l-2.115-24.363c-0.309-3.565-2.701-6.608-6.093-7.751c-3.391-1.142-7.137-0.167-9.541,2.484l-10.062,11.099l-6.22-21.766

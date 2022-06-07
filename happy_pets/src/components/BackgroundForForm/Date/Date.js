@@ -1,24 +1,12 @@
 import * as React from "react";
-import { Typography, ToggleButtonGroup, ToggleButton } from "@mui/material";
-import { withStyles } from "@material-ui/styles";
+import { Typography } from "@mui/material";
+import TextField from "@mui/material/TextField";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
+import Stack from "@mui/material/Stack";
 
 import "../MainForm/MainForm.css";
-
-const CustomToggleButton = withStyles({
-  root: {
-    backgroundColor: "white",
-    borderColor: "#4b0082",
-    lineHeight: 1,
-    padding: 8,
-    marginBlock: 4,
-    textTransform: "capitalize",
-    borderRadius: 1,
-    borderTopLeftRadius: 1,
-    color: "black",
-    fontSize: "16px",
-  },
-  typography: { fontFamily: "Roboto" },
-})((props) => <ToggleButton {...props} />);
 
 const css = `
 .css-mgs850-MuiToggleButtonGroup-root .MuiToggleButtonGroup-grouped:not(:first-of-type) {
@@ -30,14 +18,36 @@ const css = `
   color: black;
   background-color: #f2e0ff;
 }
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  top: 0px;
+  padding: 0 4px;
+  border-radius: unset;
+  border-color: #4b0082;
+}
+.css-nxo287-MuiInputBase-input-MuiOutlinedInput-input {
+  font-family: "Roboto";
+  font-size: 18px;
+  color: black;
+  padding: 10px;
+  padding-right: 1px;
+}
+.css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root {
+  padding-left: 0px;
 `;
+const StyledForDesktopDatePicker = {
+  root: {
+    backgroundColor: "white",
+    borderColor: "#4b0082",
+    textTransform: "capitalize",
+    borderRadius: 1,
+    borderTopLeftRadius: 1,
+    color: "black",
+    fontSize: "16px",
+  },
+};
 
 export default function ChoiceTheServiceForm() {
-  const [choiceService, setChoiceService] = React.useState("web");
-
-  const handleChange = (event, newChoiceService) => {
-    setChoiceService(newChoiceService);
-  };
+  const [value, setValue] = React.useState(new Date());
   return (
     <div className="wrapper-input-name">
       <style type="text/css">{css}</style>
@@ -47,16 +57,19 @@ export default function ChoiceTheServiceForm() {
         </Typography>
       </div>
 
-      <ToggleButtonGroup
-        className="input-name__button-group"
-        color="primary"
-        value={choiceService}
-        exclusive
-        onChange={handleChange}
-        fullWidth="true"
-      >
-        <CustomToggleButton value="date">Overexposure</CustomToggleButton>
-      </ToggleButtonGroup>
+      <LocalizationProvider dateAdapter={AdapterDateFns}>
+        <Stack spacing={3}>
+          <DesktopDatePicker
+            sx={StyledForDesktopDatePicker}
+            value={value}
+            minDate={new Date("2021-01-01")}
+            onChange={(newValue) => {
+              setValue(newValue);
+            }}
+            renderInput={(params) => <TextField {...params} />}
+          />
+        </Stack>
+      </LocalizationProvider>
     </div>
   );
 }
