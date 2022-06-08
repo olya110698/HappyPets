@@ -6,7 +6,7 @@ import "../MainForm/MainForm.css";
 
 const CustomToggleButton = withStyles({
   root: {
-    backgroundColor: "white",
+    backgroundColor: "whitesmoke",
     borderColor: "#4b0082",
     padding: 8,
     lineHeight: 1,
@@ -53,7 +53,7 @@ export default function ChoiceTheServiceForm() {
         value={choiceService}
         exclusive
         onChange={handleChange}
-        fullWidth="true"
+        fullWidth
       >
         <CustomToggleButton value="dog">
           <svg color="inherit" viewBox="0 0 500 450" width="22px" height="22px">

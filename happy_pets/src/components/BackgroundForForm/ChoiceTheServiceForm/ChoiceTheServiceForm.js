@@ -6,7 +6,7 @@ import "../MainForm/MainForm.css";
 
 const CustomToggleButton = withStyles({
   root: {
-    backgroundColor: "white",
+    backgroundColor: "whitesmoke",
     borderColor: "#4b0082",
     lineHeight: 1,
     padding: 8,

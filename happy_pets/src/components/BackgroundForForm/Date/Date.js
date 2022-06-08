@@ -23,30 +23,31 @@ const css = `
   padding: 0 4px;
   border-radius: unset;
   border-color: #4b0082;
+  background-color: whitesmoke;
+  height: 100%;
+  z-index: 1;
 }
+.css-1laqsz7-MuiInputAdornment-root {
+  z-index: 2;
+}
+
 .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input {
   font-family: "Roboto";
   font-size: 18px;
   color: black;
-  padding: 10px;
+  padding-block: 13px 5px;
   padding-right: 1px;
+  z-index: 2;
 }
 .css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root {
   padding-left: 0px;
+  padding-block: 12px 5px;
+}
+.css-195y93z-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
+  background-color: #4b0082;
 `;
-const StyledForDesktopDatePicker = {
-  root: {
-    backgroundColor: "white",
-    borderColor: "#4b0082",
-    textTransform: "capitalize",
-    borderRadius: 1,
-    borderTopLeftRadius: 1,
-    color: "black",
-    fontSize: "16px",
-  },
-};
 
-export default function ChoiceTheServiceForm() {
+export default function Data() {
   const [value, setValue] = React.useState(new Date());
   return (
     <div className="wrapper-input-name">
@@ -60,7 +61,6 @@ export default function ChoiceTheServiceForm() {
       <LocalizationProvider dateAdapter={AdapterDateFns}>
         <Stack spacing={3}>
           <DesktopDatePicker
-            sx={StyledForDesktopDatePicker}
             value={value}
             minDate={new Date("2021-01-01")}
             onChange={(newValue) => {
