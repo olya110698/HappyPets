@@ -1,0 +1,46 @@
+[
+  {
+    "value": "Warsaw",
+    "label": "Warsaw"
+  },
+  {
+    "value": "Lodz",
+    "label": "Lodz"
+  },
+  {
+    "value": "Krakow",
+    "label": "Krakow"
+  },
+  {
+    "value": "Wroclaw",
+    "label": "Wroclaw"
+  },
+  {
+    "value": "Poznan",
+    "label": "Poznan"
+  },
+  {
+    "value": "Gdansk",
+    "label": "Gdansk"
+  },
+  {
+    "value": "Bydgoszcz",
+    "label": "Bydgoszcz"
+  },
+  {
+    "value": "Lublin",
+    "label": "Lublin"
+  },
+  {
+    "value": "Katowice",
+    "label": "Katowice"
+  },
+  {
+    "value": "Bialystok",
+    "label": "Bialystok"
+  },
+  {
+    "value": "Szczecin",
+    "label": "Szczecin"
+  }
+]

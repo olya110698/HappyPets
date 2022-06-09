@@ -47,6 +47,7 @@ const Buttons = withStyles({
     "&:hover": {
       backgroundColor: "#4b0082",
       borderColor: "unset",
+      color: "white",
     },
     border: 0,
     color: "black",
