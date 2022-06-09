@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import HeaderApp from "../components/HeaderApp/HeaderApp";
-import ContainerForForm from "../components/ContainerForForm/ContainerForForm";
+import BackgroundForForm from "../components/BackgroundForForm/BackgroundForForm";
 
 const WrapperContainer = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ export default function StartPage() {
   return (
     <WrapperContainer>
       <HeaderApp />
-      <ContainerForForm />
+      <BackgroundForForm />
     </WrapperContainer>
   );
 }
