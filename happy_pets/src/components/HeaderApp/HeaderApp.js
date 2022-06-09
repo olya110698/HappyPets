@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import "./HeaderApp.css";
 import { withStyles } from "@material-ui/styles";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
@@ -62,23 +63,66 @@ const Buttons = withStyles({
 
 export default function HeaderApp() {
   return (
-    <HeaderContainer>
-      <style type="text/css">{css}</style>
-      <Logo />
-      <LinkContainer>
-        <Link href="/about_us">About us</Link>
-        <Link href="/adviсe">Adviсe</Link>
-        <Link href="/our_services">Our services</Link>
-        <Link href="/">+48 603 72 37 57</Link>
-        <Stack spacing={2} direction="row">
-          <Buttons href="/sign_in" variant="outlined">
-            Sign in
-          </Buttons>
-          <Buttons href="/sign_up" variant="text">
-            Sing up
-          </Buttons>
-        </Stack>
-      </LinkContainer>
-    </HeaderContainer>
+    <div>
+      <div className="header-container">
+        {/* <HeaderContainer> */}
+        <style type="text/css">{css}</style>
+        <Logo />
+        <LinkContainer>
+          <Link href="/about_us">About us</Link>
+          <Link href="/adviсe">Adviсe</Link>
+          <Link href="/our_services">Our services</Link>
+          <Link href="/">+48 603 72 37 57</Link>
+          <Stack spacing={2} direction="row">
+            <Buttons href="/sign_in" variant="outlined">
+              Sign in
+            </Buttons>
+            <Buttons href="/sign_up" variant="text">
+              Sing up
+            </Buttons>
+          </Stack>
+        </LinkContainer>
+        {/* </HeaderContainer> */}
+      </div>
+      <div className="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label className="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+
+        <ul className="menu__box">
+          <li>
+            <a className="menu__item" href="/about_us">
+              About us
+            </a>
+          </li>
+          <li>
+            <a className="menu__item" href="/adviсe">
+              Adviсe
+            </a>
+          </li>
+          <li>
+            <a className="menu__item" href="/our_services">
+              Our services
+            </a>
+          </li>
+          <li>
+            <a className="menu__item" href="/">
+              +48 603 72 37 57
+            </a>
+          </li>
+          <li>
+            <a className="menu__item" href="/sign_in">
+              Sign in
+            </a>
+          </li>
+          <li>
+            <a className="menu__item" href="/sign_up">
+              Sign up
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   );
 }
