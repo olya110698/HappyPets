@@ -22,14 +22,14 @@ const CustomButton = withStyles({
     height: "56px",
     fontSize: "20px",
     "&:hover": {
-      backgroundColor: "#f2e0ff",
+      backgroundColor: "whitesmoke",
       borderColor: "#4b0082",
       boxShadow: "none",
       color: "black",
     },
     "&:active": {
       boxShadow: "none",
-      backgroundColor: "#f2e0ff",
+      backgroundColor: "whitesmoke",
       borderColor: "#4b0082",
       color: "black",
     },

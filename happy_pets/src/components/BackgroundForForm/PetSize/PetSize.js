@@ -2,6 +2,14 @@ import * as React from "react";
 import { Typography, ToggleButtonGroup, ToggleButton } from "@mui/material";
 import { withStyles } from "@material-ui/styles";
 import styled from "styled-components";
+// import { useDispatch } from "react-redux";
+import store from "../../../redux/configureStore";
+import {
+  kg5Form,
+  kg20Form,
+  kg40Form,
+  kg40plusForm,
+} from "../../../redux/actions/Form";
 
 import "../MainForm/MainForm.css";
 
@@ -9,18 +17,18 @@ const CustomToggleButton = withStyles({
   root: {
     display: "flex",
     flexDirection: "row",
-    backgroundColor: "whitesmoke",
+    backgroundColor: "#f2e0ff",
     borderColor: "#4b0082",
     lineHeight: 1,
     padding: 4,
     margin: 4,
     textTransform: "unset",
-    borderRadius: 1,
+    borderRadius: "14px !important",
     color: "black",
     fontSize: "16px",
     marginLeft: "0px",
     marginRight: "0px",
-    width: "50%",
+    width: "48%",
   },
   typography: { fontFamily: "Roboto" },
 })((props) => <ToggleButton {...props} />);
@@ -33,7 +41,7 @@ const css = `
 
 .css-j4p6el-MuiButtonBase-root-MuiToggleButton-root.Mui-selected {
   color: black;
-  background-color: #f2e0ff;
+  background-color: whitesmoke;
 }
 
 .css-mgs850-MuiToggleButtonGroup-root .MuiToggleButtonGroup-grouped:not(:first-of-type) {
@@ -49,9 +57,20 @@ const WrapperContainer = styled.div`
 `;
 
 export default function PetSize() {
-  const [choiceSize, setSize] = React.useState("web");
+  const [choiceSize, setSize] = React.useState("");
+
+  // const dispatch = useDispatch();
 
   const handleChange = (event, newSize) => {
+    if (newSize === "5kg") {
+      store.dispatch(kg5Form());
+    } else if (newSize === "20kg") {
+      store.dispatch(kg20Form());
+    } else if (newSize === "40kg") {
+      store.dispatch(kg40Form());
+    } else if (newSize === "40kg+") {
+      store.dispatch(kg40plusForm());
+    }
     setSize(newSize);
   };
   return (
@@ -69,7 +88,7 @@ export default function PetSize() {
           value={choiceSize}
           exclusive
           onChange={handleChange}
-          fullWidth="true"
+          fullWidth={true}
         >
           <CustomToggleButton value="5kg">
             Up to <br />5 kg

@@ -6,13 +6,13 @@ import "../MainForm/MainForm.css";
 
 const CustomToggleButton = withStyles({
   root: {
-    backgroundColor: "whitesmoke",
+    backgroundColor: "#f2e0ff",
     borderColor: "#4b0082",
     padding: 8,
     lineHeight: 1,
     marginBlock: 4,
     textTransform: "capitalize",
-    borderRadius: 1,
+    borderRadius: "14px !important",
     borderTopLeftRadius: 1,
     color: "black",
     fontSize: "16px",
@@ -24,11 +24,6 @@ const css = `
 .css-mgs850-MuiToggleButtonGroup-root .MuiToggleButtonGroup-grouped:not(:first-of-type) {
   border-left: 1px solid;
   margin-left: 0px;
-}
-
-.css-j4p6el-MuiButtonBase-root-MuiToggleButton-root.Mui-selected {
-  color: black;
-  background-color: #f2e0ff;
 }
 `;
 

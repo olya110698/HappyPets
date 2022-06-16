@@ -9,6 +9,7 @@ import "../MainForm/MainForm.css";
 const css = `
   .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
     z-index: 2;
+    color: black;
 }
 .css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {
     z-index: 2;
@@ -17,6 +18,9 @@ const css = `
 
 .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
     padding-block: 15px 6px;
+}
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root.Mui-selected {
+  background-color: whitesmoke;
 }
 
 `;

@@ -14,16 +14,13 @@ const css = `
   margin-left: 0px;
 }
 
-.css-j4p6el-MuiButtonBase-root-MuiToggleButton-root.Mui-selected {
-  color: black;
-  background-color: #f2e0ff;
-}
 .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
   top: 0px;
   padding: 0 4px;
   border-radius: unset;
   border-color: #4b0082;
-  background-color: whitesmoke;
+  border-radius: 14px;
+  background-color: #f2e0ff;
   height: 100%;
   z-index: 1;
 }
