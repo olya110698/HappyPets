@@ -6,10 +6,6 @@ import { withStyles } from "@material-ui/styles";
 
 import "../MainForm/MainForm.css";
 
-const css = `
-
-`;
-
 const CustomButton = withStyles({
   root: {
     background: "#f2e0ff",
@@ -56,7 +52,6 @@ const WrapperContainer = styled.div`
 export default function Search() {
   return (
     <div className="wrapper-input-name">
-      <style type="text/css">{css}</style>
       <WrapperContainer>
         <CustomButton startIcon={<FindReplace />}>Search</CustomButton>
       </WrapperContainer>
