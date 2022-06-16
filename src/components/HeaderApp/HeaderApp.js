@@ -1,24 +1,24 @@
 import React from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
 import "./HeaderApp.css";
-import { withStyles } from "@material-ui/styles";
-import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
-import Logo from "../Logo/Logo";
+// import { withStyles } from "@material-ui/styles";
+// import Stack from "@mui/material/Stack";
+// import Button from "@mui/material/Button";
+// import Logo from "../Logo/Logo";
 
-const css = `
-.css-1rwt2y5-MuiButtonBase-root-MuiButton-root {
-    border: 1px solid;
-    text-transform: unset;
-    margin-left: 100px;
-}
-.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
-    text-transform: unset;
-}
-.css-e53awj-MuiStack-root>:not(style)+:not(style) {
-    margin-right: 16px; 
-}
-`;
+// const css = `
+// .css-1rwt2y5-MuiButtonBase-root-MuiButton-root {
+//     border: 1px solid;
+//     text-transform: unset;
+//     margin-left: 100px;
+// }
+// .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+//     text-transform: unset;
+// }
+// .css-e53awj-MuiStack-root>:not(style)+:not(style) {
+//     margin-right: 16px;
+// }
+// `;
 
 // const HeaderContainer = styled.header`
 //   display: flex;
@@ -27,40 +27,40 @@ const css = `
 //   width: 100%;
 //   height: 82px;
 // `;
-const LinkContainer = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-`;
-const Link = styled.a`
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  text-decoration: none;
-  color: unset;
-  font-size: 20px;
-  margin: 0px 5px 0px 70px;
-`;
+// const LinkContainer = styled.div`
+//   display: flex;
+//   align-items: center;
+//   flex-direction: row;
+//   justify-content: space-between;
+// `;
+// const Link = styled.a`
+//   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+//   text-decoration: none;
+//   color: unset;
+//   font-size: 20px;
+//   margin: 0px 5px 0px 70px;
+// `;
 
-const Buttons = withStyles({
-  root: {
-    background: "unset",
-    "&:hover": {
-      backgroundColor: "#4b0082",
-      borderColor: "unset",
-      color: "white",
-    },
-    border: 0,
-    color: "black",
-    width: "150px",
-    height: "56px",
-    fontSize: "20px",
-  },
-  label: {
-    textTransform: "capitalize",
-    fontSize: "30px",
-  },
-  typography: { fontFamily: "Roboto" },
-})((props) => <Button {...props} />);
+// const Buttons = withStyles({
+//   root: {
+//     background: "unset",
+//     "&:hover": {
+//       backgroundColor: "#4b0082",
+//       borderColor: "unset",
+//       color: "white",
+//     },
+//     border: 0,
+//     color: "black",
+//     width: "150px",
+//     height: "56px",
+//     fontSize: "20px",
+//   },
+//   label: {
+//     textTransform: "capitalize",
+//     fontSize: "30px",
+//   },
+//   typography: { fontFamily: "Roboto" },
+// })((props) => <Button {...props} />);
 
 export default function HeaderApp() {
   return (
